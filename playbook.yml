@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  vars:
+    website_name: 'myNginx'
+    qa_passed: True
+  tasks:
+
+  - name: url slitter getting path
+    debug: msg="{{ 'http://user:password@midominio.local:9000/dir/index.html?query'| urlsplit('path')}}"
+
+  - name: url slitter getting hostname
+    debug: msg="{{ 'http://user:password@midominio.local:9000/dir/index.html?query'| urlsplit('hostname')}}"
+
+  - name: debugging filterrs bool
+    debug: msg="{{ qa_passed | type_debug}}"
+
+  - name: debugging filterrs string
+    debug: msg="{{ qa_passed | type_debug}}"
