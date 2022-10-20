@@ -5,19 +5,22 @@ stages {
   
   stage('---clean---'){
     steps{
-    sh "mvn clean"
+    //sh "mvn clean"
+      echo "Clean phase"
     }
   }
   
     stage('---test---'){
     steps{
-    sh "mvn test"
+   // sh "mvn test"
+      echo "Test phase"
     }
   }
   
     stage('---package---'){
     steps{
-    sh "mvn package"
+   // sh "mvn package"
+    echo "Package phase"
     }
   }
   
