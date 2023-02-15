@@ -17,8 +17,8 @@ stages {
     steps{
 withCredentials([usernamePassword(credentialsId: id, usernameVariable: 'username', passwordVariable: 'password')]) {
      
-  print ${username}
-  print ${password}
+  print "${username}"
+  print "${password}"
 }
     }
   }
