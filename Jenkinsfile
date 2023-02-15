@@ -15,7 +15,7 @@ stages {
   
     stage('---Credentials---'){
     steps{
-withCredentials([usernamePassword(credentialsId: id, usernameVariable: 'username', passwordVariable: 'password')]) {
+withCredentials([usernamePassword(credentialsId: 'id', usernameVariable: 'username', passwordVariable: 'password')]) {
      
   print "hola"
 
