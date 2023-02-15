@@ -7,6 +7,7 @@ stages {
     steps{
     //sh "mvn clean"
       echo "Clean phase Febrero"
+      print "Clean Febrero"
     }
   }
   
