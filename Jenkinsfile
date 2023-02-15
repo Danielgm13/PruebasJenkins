@@ -5,10 +5,12 @@ stages {
   
   stage('---clean---'){
     steps{
+      script{
     //sh "mvn clean"
       echo "Clean phase Febrero"
       print "Clean Febrero"
-    }
+      }
+      }
   }
   
     stage('---test---'){
