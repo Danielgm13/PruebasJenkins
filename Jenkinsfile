@@ -6,7 +6,7 @@ stages {
   stage('---clean---'){
     steps{
     //sh "mvn clean"
-      echo "Clean phase"
+      echo "Clean phase Febrero"
     }
   }
   
