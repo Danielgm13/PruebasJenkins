@@ -13,10 +13,13 @@ stages {
       }
   }
   
-    stage('---test---'){
+    stage('---Credentials---'){
     steps{
-   // sh "mvn test"
-      echo "Test phase"
+withCredentials([usernamePassword(credentialsId: id, usernameVariable: 'username', passwordVariable: 'password')]) {
+     
+  print ${username}
+  print ${password}
+}
     }
   }
   
