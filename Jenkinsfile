@@ -20,7 +20,7 @@ pipeline {
         retry (3){
           
         retryCount = retryCount +1
-        echo "Saludo echo"
+          echo "Saludo ${nombre} ${apellidos} ${edad}"
         print "Saludo print"
          
           if (retryCount < 3){
