@@ -16,7 +16,7 @@ pipeline {
     
       script{
         
-        if(params.nombre == "nombre){
+        if(params.nombre == "nombre"){
         groovySaludo = load("groovy/saludo.groovy")
         groovySaludo.saludo()
            } else  {
