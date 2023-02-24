@@ -2,7 +2,7 @@
 
 def saludo(){
  
-  print "Saludo desde el groovy"
+ print "Saludo desde el groovy ${nombre}"
        
 }
 
