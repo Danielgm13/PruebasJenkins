@@ -15,20 +15,13 @@ pipeline {
       steps{
     
       script{
-        retryCount = 0
+    
+        groovySaludo = load("groovy/saludo.groovy")
+        groovySaludo.saludo()
         
-        retry (3){
-          
-        retryCount = retryCount +1
-          echo "Saludo ${nombre} ${apellidos} ${edad}"
-        print "Saludo print"
-         
-          if (retryCount < 3){
-            error("Error compañero")
-          }
-        }
-          }
-      }
+        
+          } // END Scripts
+      } // END Streps
     } // END Stage Saludo
   
   
