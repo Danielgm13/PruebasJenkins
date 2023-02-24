@@ -9,9 +9,17 @@ pipeline {
       steps{
     
       script{
+        retryCount = 0
+        
         retry (3){
+          
+        retryCount = retryCount +1
         echo "Saludo echo"
         print "Saludo print"
+         
+          if (retryCount < 3){
+            error("Error compañero")
+          }
         }
           }
       }
