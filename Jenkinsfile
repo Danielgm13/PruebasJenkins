@@ -2,6 +2,12 @@ pipeline {
 
   agent any
   
+  parameters{
+    text(name: 'nombre', description: 'nombre', defaultValue: 'nombre')
+    string(name:'apellidos', description: 'apellidos', defaultValue: 'apellidos')
+    choice(name: 'edad', description: 'edad', choices: '16\n17\n18')
+  }
+  
   stages{
   
     stage("Saludo") {
