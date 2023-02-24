@@ -15,9 +15,13 @@ pipeline {
       steps{
     
       script{
-    
+        
+        if(params.nombre == "nombre){
         groovySaludo = load("groovy/saludo.groovy")
         groovySaludo.saludo()
+           } else  {
+         print ("Saludo don nadie")
+           }
         
         
           } // END Scripts
