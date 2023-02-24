@@ -8,7 +8,7 @@ pipeline {
     
       script{
         echo "Saludo echo"
-        print "Saludo print
+        print "Saludo print"
       }
     } // END Stage Saludo
   
