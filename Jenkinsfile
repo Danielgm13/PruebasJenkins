@@ -9,9 +9,11 @@ pipeline {
       steps{
     
       script{
+        retry (3){
         echo "Saludo echo"
         print "Saludo print"
-      }
+        }
+          }
       }
     } // END Stage Saludo
   
