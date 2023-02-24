@@ -5,10 +5,13 @@ pipeline {
   stages{
   
     stage("Saludo") {
+      
+      steps{
     
       script{
         echo "Saludo echo"
         print "Saludo print"
+      }
       }
     } // END Stage Saludo
   
