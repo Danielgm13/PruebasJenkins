@@ -5,7 +5,7 @@ pipeline {
   parameters{
     text(name: 'nombre', description: 'nombre', defaultValue: 'nombre')
     string(name:'apellidos', description: 'apellidos', defaultValue: 'apellidos')
-    string(name: 'pipeline', description: 'pipeline to execute', defaultValue: 'Pipeline SCM3')
+    string(name: 'pipeline', description: 'pipeline to execute', defaultValue: 'Pipeline Pipeline SCM2')
     choice(name: 'edad', description: 'edad', choices: '16\n17\n18')
   }
 
