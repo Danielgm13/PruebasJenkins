@@ -27,7 +27,13 @@ pipeline {
 
         build_result = "${build.getResult()}"
         print("Salida: ${build_result}")
-        print("${env.saludo}")
+        
+        variable_results = build.getBuildVariables();
+        
+        saludo = variable_results.saludo
+        
+        print("${saludo}")
+        
 
 
 
