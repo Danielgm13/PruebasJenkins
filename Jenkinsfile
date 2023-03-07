@@ -18,7 +18,7 @@ pipeline {
       script{
 
         print("${env.pipeline}")
-        build = build job: "${pipeline}",
+        build = build job: "${env.pipeline}",
         parameters: [
           text(name: 'nombre',value: 'nombrepipe'),
           string(name:'apellidos', value: 'apellidospipe')
@@ -27,6 +27,7 @@ pipeline {
 
         build_result = "${build.getResult()}"
         print("Salida: ${build_result}")
+        print("${env.saludo}")
 
 
 
