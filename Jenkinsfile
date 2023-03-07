@@ -17,7 +17,7 @@ pipeline {
 
       script{
 
-        build = build job: "${pipeline}",
+        build = build job: "${env.pipeline}",
         parameters: [
           text(name: 'nombre',value: 'nombrepipe'),
           string(name:'apellidos', value: 'apellidospipe')
