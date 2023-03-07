@@ -19,8 +19,8 @@ pipeline {
 
         build = build job: "${pipeline}",
         parameters: [
-          text(name: 'nombre',value: 'nombrepipe')
-          string(name:'apellidos', value: 'apellidos'pipe)
+          text(name: 'nombre',value: 'nombrepipe'),
+          string(name:'apellidos', value: 'apellidospipe'),
           choice(name: 'edad', value: '18')
         ],
         propagate: false
