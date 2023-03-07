@@ -17,6 +17,7 @@ pipeline {
 
       script{
 
+        print("${pipeline}")
         build = build job: "${pipeline}",
         parameters: [
           text(name: 'nombre',value: 'nombrepipe'),
