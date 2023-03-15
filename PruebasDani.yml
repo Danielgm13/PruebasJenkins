@@ -1,8 +1,8 @@
 ---
 
 - hosts: all
- conection: local
- tasks:
+  connection: local
+  tasks:
    - name: Saludo
      debug:
        msg: "Saludos desde localhost"
