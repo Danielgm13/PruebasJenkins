@@ -1,9 +1,9 @@
 ---
 
-hosts: all
-connection: local
-tasks:
-  - name: Saludo
-    debug:
-      msg: "Saludos desde localhost"
+- hosts: all
+ connection: local
+ tasks:
+   - name: Saludo
+     debug:
+       msg: "Saludos desde localhost"
  
