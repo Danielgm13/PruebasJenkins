@@ -5,5 +5,5 @@
   tasks:
    - name: Saludo
      debug:
-       msg: "Saludos desde localhost"
+       msg: "{{ saludos }} desde localhost"
  
