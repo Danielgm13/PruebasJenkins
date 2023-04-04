@@ -1,4 +1,9 @@
 ---
-  name: Ansible facts
-  debug:
-     msg: "{{ ansible_facts }}"
+
+- name: Pruebitas AWS
+  hosts: all
+  gather_facts: true
+  
+   - name:
+     debug:
+        msg: "{{ ansible_facts }}"
