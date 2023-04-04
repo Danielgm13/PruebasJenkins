@@ -3,6 +3,7 @@
 - name: Pruebitas AWS
   hosts: all
   gather_facts: true
+  tasks:
   
    - name: Yokse
      debug:
