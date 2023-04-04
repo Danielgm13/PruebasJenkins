@@ -4,6 +4,6 @@
   hosts: all
   gather_facts: true
   
-   - name:
+   - name: Yokse
      debug:
         msg: "{{ ansible_facts }}"
