@@ -3,7 +3,7 @@
 - hosts: all
   connection: local
   tasks:
-   - name: Saludo
+   - name: Server configuration
      debug:
-       msg: "{{ saludos }} desde localhost"
+       msg: "Server name: {{ server_name }}\nIP Server: {{ server_ip }}"
  
