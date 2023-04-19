@@ -5,5 +5,7 @@
   tasks:
    - name: Server configuration
      debug:
-       msg: "Server name: {{ server_name }}\nIP Server: {{ server_ip }}"
+       msg: 
+          - "Server name: {{ server_name }}"
+          - "IP Server: {{ server_ip }}"
  
