@@ -1,10 +1,16 @@
 ---
 
-- name: Pruebitas AWS
-  hosts: all
-  gather_facts: true
-  tasks:
-  
-   - name: Yokse
-     debug:
-        msg: "{{ ansible_facts }}"
+  - name: Output command
+       command: pip3 list
+       register: pip
+
+     - name: Output var
+       debug:
+         var: pip 
+
+     - name: Read info from
+       xml:
+           path: ./SIGURXSA_05020101_SIGUR_HCPRO_ConInt.xml
+           content: text
+           xpath: /channel/enabled
+       register: xml_content
