@@ -1,13 +1,17 @@
 ---
 
-  - name: Output command
+- name: Cosas
+   hosts: localhost
+   tasks:
+
+     - name: Output command
        command: pip3 list
        register: pip
 
      - name: Output var
        debug:
-         var: pip 
-
+         var: pip
+         
      - name: Read info from
        xml:
            path: ./SIGURXSA_05020101_SIGUR_HCPRO_ConInt.xml
