@@ -1,6 +1,8 @@
 ---
--  hosts: localhost
-   tasks:
+
+- name: Ansible
+  connection: local
+  hosts: localhost
 
      - name: Output command
        command: pip3 list
