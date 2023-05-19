@@ -1,8 +1,8 @@
 ---
 
 - name: Cosas
-   hosts: localhost
-   tasks:
+  hosts: localhost
+  tasks:
 
      - name: Output command
        command: pip3 list
