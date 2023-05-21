@@ -4,7 +4,7 @@
   tasks:
     
     - name: Command
-      shell: "whoami"
+      shell: "/root/.local/bin/ansible-galaxy collection list"
       register: salida
       
      - name: Command
