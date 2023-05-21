@@ -5,11 +5,9 @@
   become: true
   tasks:
     - name: Define el intérprete de Python
-      set_fact:
-        ansible_python_interpreter: /usr/bin/python3
-
-    - name: Add a 'phonenumber' element to the 'business' element
-      community.general.xml:
-        path: /foo/bar.xml
-        xpath: /business/phonenumber
-        value: 555-555-1234
+      command: pip3 list
+      register: salida
+      
+    - name: Salida
+      debug:
+        var: salida
