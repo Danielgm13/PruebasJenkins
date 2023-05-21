@@ -1,20 +1,14 @@
----
 
-- name: Ansible
-  connection: local
+
+- name: Ejemplo de tarea con definición de intérprete de Python
   hosts: localhost
+  tasks:
+    - name: Define el intérprete de Python
+      set_fact:
+        ansible_python_interpreter: /usr/bin/python3
 
-     - name: Output command
-       command: pip3 list
-       register: pip
-
-     - name: Output var
-       debug:
-         var: pip
-         
-     - name: Read info from
-       xml:
-           path: ./SIGURXSA_05020101_SIGUR_HCPRO_ConInt.xml
-           content: text
-           xpath: /channel/enabled
-       register: xml_content
+    - name: Add a 'phonenumber' element to the 'business' element
+      community.general.xml:
+        path: /foo/bar.xml
+        xpath: /business/phonenumber
+        value: 555-555-1234
