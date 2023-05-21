@@ -4,30 +4,16 @@
   tasks:
   
     - name: Command1
-      shell: "ansible-galaxy collection list"
+      shell: "ls /root"
       register: salida1
       
     - name: Salida1
       debug:
         var: salida1
       
-    - name: Install1
-      shell: "ansible-galaxy collection install community.general --collections-path=/usr/share/ansible/collections/ansible_collections"
-      register: salida
+
       
-    - name: Command2
-      shell: "ansible-galaxy collection list"
-      register: salida2
-      
-    - name: Salida2
-      debug:
-        var: salida2
-        
-        
-    - name: Include task list in play
-      ansible.builtin.include_tasks:
-       file: xml.yml
-      
+
 
 
 
