@@ -4,7 +4,7 @@
   tasks:
     
     - name: Command
-       command: /root/.local/bin/ansible-galaxy collection install community.general
+       command: "/root/.local/bin/ansible-galaxy collection install community.general"
 
     - name: Add a 'phonenumber' element to the 'business' element
       community.general.xml:
