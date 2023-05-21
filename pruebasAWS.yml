@@ -6,14 +6,27 @@
   collections:
     - community.general
   tasks:
-    - name: Command
+  
+    - name: Command1
+      shell: "ansible-galaxy collection list"
+      register: salida1
+      
+    - name: Salida1
+      debug:
+        var: salida1
+      
+    - name: Install1
       shell: "ansible-galaxy collection install community.general"
       register: salida
       
-    - name: Add a 'phonenumber' element to the 'business' element
-      xml:
-        path: /foo/bar.xml
-        xpath: /business/phonenumber
-        value: 555-555-1234
+    - name: Command2
+      shell: "ansible-galaxy collection list"
+      register: salida2
+      
+    - name: Salida2
+      debug:
+        var: salida2
+      
+
 
 
