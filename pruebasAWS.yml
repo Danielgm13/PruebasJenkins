@@ -1,30 +1,17 @@
-
-
 - name: Ejemplo de tarea con definición de intérprete de Python
   hosts: localhost
-  collections:
-    - community.general
+  become: true
   tasks:
-  
-    - name: Command1
-      shell: "ansible-galaxy collection list"
-      register: salida1
-      
-    - name: Salida1
-      debug:
-        var: salida1
-      
-    - name: Install1
-      shell: "ansible-galaxy collection install community.general"
-      register: salida
-      
-    - name: Command2
-      shell: "ansible-galaxy collection list"
-      register: salida2
-      
-    - name: Salida2
-      debug:
-        var: salida2
+    - name: Define el intérprete de Python
+      set_fact:
+        ansible_python_interpreter: /usr/bin/python3
+
+    - name: Add a 'phonenumber' element to the 'business' element
+      community.general.xml:
+        path: /foo/bar.xml
+        xpath: /business/phonenumber
+        value: 555-555-1234
+      ignore_errors: true
       
 
 
