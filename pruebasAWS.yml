@@ -3,10 +3,7 @@
   hosts: localhost
   become: true
   tasks:
-  
-    - name: Define el intérprete de Python
-      set_fact:
-        ansible_python_interpreter: /usr/bin/python3
+
 
     - name: Add a 'phonenumber' element to the 'business' element
       community.general.xml:
