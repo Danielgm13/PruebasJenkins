@@ -6,3 +6,9 @@
   tasks:
     - name: Define el intérprete de Python
       command: whoami
+      regiser: salida
+      
+    - name: Define el intérprete de Python
+      debug: whoami
+        var: salida
+      
