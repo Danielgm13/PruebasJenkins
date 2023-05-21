@@ -4,10 +4,6 @@
   become: true
   tasks:
   
-    - name: Sudo su
-      command: sudo su
-      
-      
     - name: Define el intérprete de Python
       set_fact:
         ansible_python_interpreter: /usr/bin/python3
