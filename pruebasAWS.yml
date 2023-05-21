@@ -11,8 +11,3 @@
       debug:
        var: salida
 
-    - name: Add a 'phonenumber' element to the 'business' element
-      community.general.xml:
-        path: /foo/bar.xml
-        xpath: /business/phonenumber
-        value: 555-555-1234
