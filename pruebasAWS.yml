@@ -12,7 +12,7 @@
         var: salida1
       
     - name: Install1
-      shell: "ansible-galaxy collection install community.general"
+      shell: "ansible-galaxy collection install community.general --collections-path=/usr/share/ansible/collections/ansible_collections"
       register: salida
       
     - name: Command2
