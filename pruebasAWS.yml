@@ -2,6 +2,7 @@
 
 - name: Ejemplo de tarea con definición de intérprete de Python
   hosts: localhost
+  become: true
   tasks:
     - name: Define el intérprete de Python
       set_fact:
