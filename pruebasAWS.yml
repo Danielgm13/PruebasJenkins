@@ -4,7 +4,7 @@
   tasks:
   
     - name: Command1
-      shell: "ls /awx_devel"
+      shell: "ls /"
       register: salida1
       
     - name: Salida1
