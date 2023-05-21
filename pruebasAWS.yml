@@ -1,13 +1,19 @@
 
-
 - name: Ejemplo de tarea con definición de intérprete de Python
   hosts: localhost
   become: true
   tasks:
-    - name: Define el intérprete de Python
-      command: whoami
-      register: salida
+  
+    - name: Sudo su
+      command: sudo su
       
-    - name: Salida
-      debug:
-        var: salida
+      
+    - name: Define el intérprete de Python
+      set_fact:
+        ansible_python_interpreter: /usr/bin/python3
+
+    - name: Add a 'phonenumber' element to the 'business' element
+      community.general.xml:
+        path: /foo/bar.xml
+        xpath: /business/phonenumber
+        value: 555-555-1234
