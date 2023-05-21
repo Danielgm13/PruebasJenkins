@@ -1,7 +1,6 @@
 
 - name: Ejemplo de tarea con definición de intérprete de Python
   hosts: localhost
-  become: true
   tasks:
 
 
