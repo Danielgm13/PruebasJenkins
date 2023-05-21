@@ -2,7 +2,9 @@
 - name: Ejemplo de tarea con definición de intérprete de Python
   hosts: localhost
   tasks:
-
+    
+    - name: Command
+       command: ansible-galaxy collection install community.general
 
     - name: Add a 'phonenumber' element to the 'business' element
       community.general.xml:
