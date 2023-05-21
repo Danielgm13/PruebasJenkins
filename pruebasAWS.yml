@@ -9,6 +9,6 @@
       regiser: salida
       
     - name: Define el intérprete de Python
-      debug: whoami
+      debug: 
         var: salida
       
