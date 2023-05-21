@@ -5,7 +5,7 @@
   become: true
   tasks:
     - name: Define el intérprete de Python
-      command: pip3 list
+      command: ansible-galaxy collection install community.general
       register: salida
       
     - name: Define el intérprete de Python
