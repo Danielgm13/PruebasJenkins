@@ -3,14 +3,18 @@
   become: true
   tasks:
   
-    - name: Command1
-      shell: "ls /"
-      register: salida1
+    - name: Command2
+      shell: "ansible-galaxy collection list"
+      register: salida2
       
-    - name: Salida1
+    - name: Salida2
       debug:
-        var: salida1
-      
+        var: salida2
+         
+    - name: Include task list in play
+      ansible.builtin.include_tasks:
+       file: xml.yml
+      ignore_erros: true
 
       
 
