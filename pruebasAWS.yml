@@ -4,7 +4,7 @@
   tasks:
   
     - name: Command2
-      shell: "ansible-galaxy install community.general --ignore-errors"
+      shell: "ansible-galaxy collection install community.general"
       register: salida2
       delegate_to: localhost
       
