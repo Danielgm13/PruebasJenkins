@@ -1,11 +1,12 @@
 - name: Ejemplo de tarea con definición de intérprete de Python
-  hosts: localhost
+  hosts: all
   become: true
   tasks:
   
     - name: Command2
-      shell: "ansible-galaxy collection list"
+      shell: "ansible-galaxy install community.manager"
       register: salida2
+      delegate_to: localhost
       
     - name: Salida2
       debug:
